@@ -1,0 +1,601 @@
+# Product Requirements Document
+## SISMA — Startup Review Readiness Improvements
+
+**Version:** 1.0  
+**Purpose:** Temporary improvements before Claude Startups application review  
+**Existing Application:** SISMA — Sistem Informasi SPP & Keuangan Sekolah  
+**Repository:** https://github.com/ipangpangeran/spp_sekolah  
+**Development Website:** https://dev.spp-smapersiapan.web.id/  
+**Company Email:** mail@dev.spp-smapersiapan.web.id
+
+---
+
+## 1. Objective
+
+Improve the existing SISMA application so that an external reviewer can:
+
+1. Understand what SISMA does without logging in.
+2. Inspect the product's actual capabilities.
+3. Understand the product's development and deployment status.
+4. Identify the product owner or development team.
+5. Contact the developer through a working company email.
+6. Understand how Claude may be used in the product.
+7. Evaluate a real, working AI-assisted feature if Claude integration is implemented.
+
+This project is not a full application rewrite.
+
+The objective is to improve product discoverability, transparency, demonstration, and readiness for external review while preserving all existing business functionality.
+
+All public information must accurately reflect the actual product and business.
+
+## 2. Scope and Constraints
+
+### 2.1 In Scope
+
+- Public product homepage.
+- Product feature documentation.
+- Public product demonstration using synthetic data.
+- Product development status.
+- About and contact information.
+- Privacy policy and security overview.
+- Basic SEO and website metadata.
+- Optional Claude API proof of concept.
+- Repository README improvements.
+- Reviewer-friendly navigation.
+
+### 2.2 Out of Scope
+
+- Replacing the existing authentication system.
+- Rewriting the database schema.
+- Replacing Prisma or the existing application framework.
+- Changing financial calculation rules.
+- Modifying existing payment transactions.
+- Changing role-based access controls.
+- Adding fake customers, testimonials, user counts, or revenue.
+- Claiming that the application is production-ready without verification.
+- Claiming Claude is integrated before a working integration exists.
+- Creating fake company registrations or backdated development records.
+
+### 2.3 Non-Negotiable Requirements
+
+1. Preserve the existing login and application routes.
+2. Preserve existing backend APIs and authorization rules.
+3. Do not modify production data.
+4. Do not expose environment variables, database credentials, API keys, or secrets.
+5. Do not expose real student information or financial records publicly.
+6. Use synthetic data for all public demonstrations.
+7. Distinguish implemented features from planned features.
+8. Do not fabricate company details or startup traction.
+9. Inspect the existing codebase before changing files.
+10. Reuse the existing technology stack and components wherever practical.
+
+---
+
+## 3. Current Product Context
+
+SISMA is a school finance management application focused on student tuition fee administration.
+
+The existing product specification describes capabilities including:
+
+- Student and class records.
+- Academic year management.
+- Monthly SPP billing.
+- Non-recurring school fees.
+- Payment recording and history.
+- Cash inflow and expense records.
+- Financial reports.
+- Payment receipts.
+- Administrative user roles.
+
+The implementation status of each capability must be verified against the actual codebase.
+
+The public website must not imply that every capability in the original PRD is already implemented.
+
+### Product Status
+
+Before implementation, verify the relationship between the legacy system and the current application.
+
+If the legacy application is operational but the current Next.js application is still being developed, explain this distinction clearly.
+
+Recommended status wording when accurate:
+
+"SISMA is a school finance management application being developed to streamline student tuition payment records and school financial administration. The current web application is under active development."
+
+If an existing legacy deployment is genuinely in use, the website may additionally explain that the current application is a modernization of the existing workflow.
+
+Do not claim that the current version is being used by a school unless this has been verified.
+
+---
+
+## 4. Public Website Requirements
+
+### 4.1 Homepage
+
+The root URL must display a public product page rather than requiring visitors to log in immediately.
+
+The existing application must remain accessible through a clearly visible Sign In button.
+
+The homepage should contain:
+
+1. Navigation.
+2. Product hero.
+3. Core product capabilities.
+4. Actual application screenshots.
+5. Product development status.
+6. Product owner and contact information.
+7. Privacy and security information.
+8. Footer with navigation links.
+
+Suggested navigation:
+
+- Overview
+- Features
+- Product Demo
+- About
+- Privacy
+- Sign In
+
+Do not create separate pages when the existing routing architecture makes a simpler implementation more appropriate.
+
+### 4.2 Hero Section
+
+Use the following copy as a starting point.
+
+Headline:
+
+"School Fee Management, Made Simpler."
+
+Description:
+
+"SISMA is a web-based school finance management application designed to help school administrators organize student tuition payments, review payment status, and maintain financial records in one place."
+
+Primary CTA:
+
+"Explore Product"
+
+Secondary CTA:
+
+"Sign In"
+
+Visible status label:
+
+"Currently in Development"
+
+The product status label must be updated only when the actual development status changes.
+
+Design requirements:
+
+- Modern B2B SaaS appearance.
+- Responsive layout.
+- Clear typography and spacing.
+- Accessible color contrast.
+- Minimal animation.
+- Actual SISMA branding.
+- No fabricated customer logos or testimonials.
+
+### 4.3 Product Features
+
+Display only verified features.
+
+Each feature card should contain:
+
+- Feature name.
+- Short explanation.
+- Current implementation status.
+- Screenshot or relevant interface preview, where available.
+
+Suggested feature categories:
+
+A. Student Management
+
+- Student records.
+- Class assignments.
+- Student status.
+
+B. SPP and Payment Management
+
+- Monthly payment records.
+- Payment status.
+- Payment history.
+
+C. Financial Administration
+
+- Cash records.
+- Expenses.
+- Payment summaries.
+
+D. Reports
+
+- Payment reports.
+- Outstanding payment reports.
+- Period-based financial summaries.
+
+Implementation status labels:
+
+- Available
+- In Development
+- Planned
+
+The frontend must not label a feature as Available unless the existing application actually supports it.
+
+### 4.4 Product Preview
+
+Provide a public demonstration of the existing application.
+
+Preferred implementation:
+
+- Use screenshots captured from the actual application.
+- Use synthetic student and transaction records.
+- Remove all personally identifiable information.
+- Keep the demonstration separate from the live database.
+
+Recommended previews:
+
+1. Main dashboard.
+2. Student directory.
+3. Payment recording interface.
+4. Financial report interface.
+
+If interactive demonstration is feasible, create a read-only demo mode using synthetic data.
+
+The public demo must never have access to real financial mutation endpoints.
+
+Do not create a fake dashboard that implies the application has working features when it is only a static mockup.
+
+### 4.5 About Section
+
+Provide a concise explanation of the product and its developer.
+
+Required fields:
+
+- Product name.
+- Product purpose.
+- Development status.
+- Actual developer or legal entity name, if appropriate.
+- Contact email.
+
+If SISMA is a product rather than a registered legal entity, identify it as a product.
+
+Do not present a product name as a legal company name unless that is accurate.
+
+The founding date may be displayed only if it can be supported by reliable records.
+
+Do not publish personal or corporate registration information unnecessarily.
+
+### 4.6 Contact Information
+
+Display:
+
+Email: mail@dev.spp-smapersiapan.web.id
+
+Requirements:
+
+- Use a working mailto link.
+- Keep the email consistent with the application information.
+- Do not expose credentials or internal contact details.
+- Do not claim a support team or service-level agreement unless one exists.
+
+### 4.7 Privacy Policy
+
+Create a public Privacy Policy page describing the application's actual data practices.
+
+Cover:
+
+- Categories of student and financial information handled.
+- Purpose of data processing.
+- Access controls.
+- Data storage and retention, where known.
+- Third-party services, if used.
+- Contact for privacy questions.
+- AI processing and data handling, if Claude integration is introduced.
+
+Do not make unsupported claims such as "fully compliant with every privacy regulation."
+
+The policy must reflect the real implementation and the developer's actual practices.
+
+### 4.8 Security Overview
+
+Provide a concise description of existing security measures only after checking the codebase.
+
+Potential topics:
+
+- Authentication.
+- Role-based access controls.
+- Server-side authorization.
+- Secret management.
+- Protection of student and financial information.
+
+Do not claim that SISMA has completed a security audit, penetration test, or external certification unless evidence exists.
+
+---
+
+## 5. Claude Integration: Optional but Recommended
+
+### 5.1 Objective
+
+Implement one small, real Claude API proof of concept that demonstrates a plausible use of Claude within SISMA.
+
+Do not attempt to build a large autonomous agent as part of this temporary scope.
+
+### 5.2 Proposed Feature: AI Financial Report Assistant
+
+The feature should help authorized administrators summarize financial reports.
+
+Example user request:
+
+"Summarize the payment status for the selected month."
+
+Expected workflow:
+
+1. An authenticated administrator opens a financial report.
+2. The server verifies the user's authorization.
+3. The application retrieves only the necessary financial aggregates.
+4. The backend sends the permitted summary data and user request to Claude.
+5. Claude returns a concise explanation.
+6. The application displays the result with a clear AI-generated label.
+7. The administrator reviews the result.
+
+Example response:
+
+"Recorded payments for the selected period total Rp 12,500,000. Several payment records remain outstanding and should be checked against the official school ledger."
+
+The amount above is illustrative only and must not be presented as actual SISMA data.
+
+### 5.3 Data Requirements
+
+Use synthetic data for initial testing.
+
+Do not send student names, NIS, NISN, parent phone numbers, credentials, or unnecessary transaction details to Claude.
+
+Prefer aggregate inputs such as:
+
+- Reporting period.
+- Total recorded payments.
+- Total outstanding balances.
+- Number of records requiring review.
+- Aggregate amounts by payment category.
+
+The AI must not independently create, edit, cancel, or mark financial transactions as paid.
+
+### 5.4 Technical Requirements
+
+- Use the official Anthropic API.
+- Keep the API key on the server.
+- Read the key from a server-side environment variable.
+- Never expose the key through client-side code or public responses.
+- Add request validation.
+- Enforce authentication and authorization.
+- Apply rate limits or other reasonable usage controls.
+- Handle API errors and timeouts gracefully.
+- Avoid logging sensitive financial data.
+- Clearly label AI-generated output.
+- Keep human verification in the workflow.
+
+The exact API route, service implementation, and environment configuration must follow the existing application architecture.
+
+Do not assume a particular API route exists before inspecting the repository.
+
+### 5.5 AI Output Requirements
+
+Claude should summarize data provided by the application.
+
+It must not invent missing values.
+
+The system prompt should instruct Claude to:
+
+- Use only the supplied figures.
+- State when information is insufficient.
+- Avoid inventing payment status or amounts.
+- Identify observations as observations rather than verified financial conclusions.
+- Never recommend changing a transaction without authorized human review.
+
+### 5.6 Feature Status
+
+If implementation is incomplete, display:
+
+"AI financial report assistance is currently experimental."
+
+If Claude has not been integrated, describe the feature as planned and do not display a false integration badge.
+
+A working proof of concept is preferable to a nonfunctional AI interface.
+
+---
+
+## 6. Repository Improvements
+
+Update the repository README to include:
+
+1. Product overview.
+2. Problem being solved.
+3. Current product status.
+4. Verified implemented features.
+5. Technology stack based on the actual codebase.
+6. Screenshots using synthetic data.
+7. Development setup instructions.
+8. Environment variable names without secret values.
+9. Contact information.
+10. Known limitations.
+
+Update the repository description to a concise, accurate statement.
+
+Suggested description:
+
+"SISMA is a web-based school finance management application for organizing student tuition payments, payment records, and school financial reports."
+
+Add relevant repository topics, such as:
+
+- school-management
+- tuition-payment
+- education-technology
+- nextjs
+
+Only add topics that accurately describe the project.
+
+Do not commit API keys, credentials, database dumps, real student data, or private configuration.
+
+---
+
+## 7. Design Requirements
+
+Use the existing application branding and a clean SaaS design system.
+
+Visual direction:
+
+- Professional and trustworthy.
+- Modern financial administration interface.
+- Clear information hierarchy.
+- Consistent spacing.
+- Accessible typography.
+- Responsive desktop and mobile layouts.
+- Restrained colors and animations.
+
+The public website should feel like part of the actual SISMA product.
+
+Avoid:
+
+- Generic AI-generated marketing claims.
+- Excessive animations.
+- Fake customer logos.
+- Fake usage statistics.
+- Fabricated testimonials.
+- Unrelated stock dashboards.
+- Overly ambitious claims about AI capabilities.
+
+---
+
+## 8. SEO and Technical Discoverability
+
+Implement:
+
+- Descriptive page title.
+- Meta description.
+- Favicon using actual SISMA branding.
+- Open Graph title and description.
+- Canonical URL where appropriate.
+- Sitemap if supported by the current application.
+- Robots configuration that allows public product pages to be indexed.
+
+Ensure that public product pages do not expose protected application routes or private information.
+
+Do not expose the development website's database, internal API documentation, or administrative endpoints through search indexing.
+
+---
+
+## 9. Acceptance Criteria
+
+The task is complete when all applicable criteria pass.
+
+### Public Website
+
+- [ ] The root URL loads without requiring authentication.
+- [ ] The product purpose is understandable within a short visit.
+- [ ] Product features are described accurately.
+- [ ] Feature status labels match implementation reality.
+- [ ] Screenshots show the actual application.
+- [ ] Public previews use synthetic data.
+- [ ] The development status is explicit.
+- [ ] Contact information is correct.
+- [ ] Privacy information is available.
+- [ ] Mobile layout works.
+
+### Existing Application
+
+- [ ] Login remains functional.
+- [ ] Existing authentication is preserved.
+- [ ] Existing authorization rules are preserved.
+- [ ] Existing application routes remain accessible.
+- [ ] Existing financial operations continue to work.
+- [ ] No production data is modified by the redesign.
+- [ ] No new public endpoint can access protected financial data.
+
+### Claude Integration, If Implemented
+
+- [ ] A real Claude API request succeeds.
+- [ ] API keys remain server-side.
+- [ ] Only authorized users can invoke the feature.
+- [ ] Tests use synthetic data.
+- [ ] AI output does not directly modify transactions.
+- [ ] Errors and timeouts are handled.
+- [ ] The UI clearly identifies AI-generated summaries.
+- [ ] The feature status shown on the website is accurate.
+
+### Repository
+
+- [ ] README explains the product and development status.
+- [ ] Repository description is populated.
+- [ ] No secrets are committed.
+- [ ] Setup instructions are accurate.
+- [ ] Screenshots do not contain personal information.
+
+---
+
+## 10. Implementation Plan
+
+### Phase 1 — Inspect and Protect
+
+1. Inspect the current application architecture.
+2. Identify existing routes and authentication logic.
+3. Verify the actual state of implemented modules.
+4. Identify the current root-page behavior.
+5. Create a small, reviewable implementation plan.
+6. Confirm that no secrets or student information are exposed.
+
+Do not start by rewriting the application.
+
+### Phase 2 — Product Discoverability
+
+1. Add the public product homepage.
+2. Preserve the existing login page and route.
+3. Add feature descriptions.
+4. Add real application screenshots.
+5. Add product status and About sections.
+6. Add contact and privacy pages.
+7. Improve metadata.
+
+### Phase 3 — Product Demonstration
+
+1. Prepare synthetic demonstration data.
+2. Capture actual application screenshots.
+3. Optionally build a read-only demonstration.
+4. Confirm that the public demo cannot mutate live data.
+
+### Phase 4 — Claude Proof of Concept
+
+1. Inspect the current backend architecture.
+2. Add a small server-side Claude API integration.
+3. Implement financial report summarization.
+4. Test with synthetic data.
+5. Add access controls, error handling, and output labeling.
+6. Document limitations.
+
+This phase may be deferred if it would risk destabilizing the existing application.
+
+### Phase 5 — Validation
+
+1. Test the public homepage.
+2. Test login and existing routes.
+3. Test role-based access.
+4. Verify that public pages cannot access protected data.
+5. Check mobile responsiveness.
+6. Verify metadata and navigation.
+7. Confirm that all product claims match actual capabilities.
+8. Document completed changes and remaining limitations.
+
+---
+
+## 11. Final Deliverables
+
+Expected deliverables:
+
+1. Public product homepage.
+2. Product feature and status section.
+3. Actual product screenshots or read-only demo.
+4. About and contact information.
+5. Privacy policy.
+6. Updated repository README.
+7. Updated repository description.
+8. Working Claude proof of concept, if implemented.
+9. Test results.
+10. A concise list of implemented features and remaining limitations.
+
+The final implementation must preserve the existing SISMA application and must not introduce false claims about company status, customers, production usage, or Claude integration.
